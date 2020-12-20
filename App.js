@@ -1,22 +1,9 @@
 import React from "react";
-import {
-  StyleSheet,
-  SafeAreaView,
-  Text,
-  Platform,
-  StatusBar,
-} from "react-native";
-import { useDeviceOrientation } from "@react-native-community/hooks";
+import { StyleSheet, Platform, StatusBar } from "react-native";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
-  const orientation = useDeviceOrientation();
-
-  console.log("orint", orientation);
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text>Hi</Text>
-    </SafeAreaView>
-  );
+  return <WelcomeScreen />;
 }
 
 const styles = StyleSheet.create({
