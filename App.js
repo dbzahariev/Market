@@ -1,15 +1,22 @@
 import React from "react";
-import { StyleSheet, Platform, StatusBar } from "react-native";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
+import { StyleSheet } from "react-native";
+
+import ListeningDetailScreen from "./app/screens/ListeningDetailScreen";
 
 export default function App() {
-  return <WelcomeScreen />;
+  return <ListeningDetailScreen />;
+
+  // return (
+  //   <View
+  //     style={}
+  //   ></View>
+  // );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
