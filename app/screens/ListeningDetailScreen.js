@@ -2,31 +2,29 @@ import React from "react";
 import { View, StyleSheet, Image } from "react-native";
 import AppText from "../components/AppText";
 import colors from "../config/colors";
+import ListItem from "../components/ListItem";
 
 function ListeningDetailScreen(props) {
   return (
-    <View style={styles.container}>
+    <View>
       <Image style={styles.image} source={require("../assets/jacket.jpg")} />
       <View style={styles.detailContainer}>
         <AppText style={styles.title}>Red Jacket for sale</AppText>
         <AppText style={styles.price}>$100</AppText>
+        <View style={styles.userContainer}>
+          <ListItem
+            title="Mosh Hamedani"
+            subTitle="5 Listings"
+            image={require("../assets/mosh.jpg")}
+          />
+        </View>
       </View>
-      {/* <Card
-        title="Red Jacket for sale"
-        subTitle="$100"
-        image={require("../assets/jacket.jpg")}
-      />
-      <Card
-        title="Couch in great condition"
-        subTitle="$900"
-        image={require("../assets/couch.jpg")}
-      /> */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  userContainer: { marginVertical: 40 },
   detailContainer: { padding: 20 },
   image: {
     width: "100%",
